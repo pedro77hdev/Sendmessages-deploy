@@ -3,11 +3,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const mail_controller_1 = __importDefault(require("../controllers/mail.controller"));
+const mail_controller_1 = __importDefault(require("@src/controllers/mail.controller"));
 const express_1 = require("express");
 const mailRouter = (0, express_1.Router)();
 mailRouter.post('/send', mail_controller_1.default.mail);
-mailRouter.get('/', (req, res) => {
+mailRouter.get('/', (res) => {
     res.send({
         "hello": "world"
     });
