@@ -6,9 +6,9 @@ const mailRouter = Router()
 
 
 mailRouter.post('/send', mailController.mail)
-mailRouter.get('/', (res:Response) => {
+mailRouter.get('/', (req , res:Response) => {
   res.send({
-    "hello":"world"
+    hello:"world"
   })
 })
 

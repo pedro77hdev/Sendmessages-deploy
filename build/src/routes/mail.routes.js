@@ -7,9 +7,9 @@ const mail_controller_1 = __importDefault(require("../controllers/mail.controlle
 const express_1 = require("express");
 const mailRouter = (0, express_1.Router)();
 mailRouter.post('/send', mail_controller_1.default.mail);
-mailRouter.get('/', (res) => {
+mailRouter.get('/', (req, res) => {
     res.send({
-        "hello": "world"
+        hello: "world"
     });
 });
 exports.default = mailRouter;

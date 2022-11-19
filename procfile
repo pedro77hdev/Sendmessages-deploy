@@ -1,1 +1,1 @@
-worker:mpm start
+worker:npm start
