@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 require("module-alias/register");
+const dotenv_1 = __importDefault(require("dotenv"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const mail_routes_1 = __importDefault(require("./routes/mail.routes"));
@@ -24,6 +25,7 @@ class serverInit extends core_1.Server {
     setupExpress() {
         this.app.use(body_parser_1.default.json());
         this.app.use((0, cors_1.default)());
+        dotenv_1.default.config();
     }
     routes() {
         this.app.use("/mail", mail_routes_1.default);
