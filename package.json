@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node build/src/app.js ",
+    "postinstall": "tsc",
     "dev": "nodemon src/app.ts",
     "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
