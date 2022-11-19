@@ -1,11 +1,12 @@
 import mailController from "@src/controllers/mail.controller";
-import { Router } from "express";
+import { Response , Router } from "express";
+
 
 const mailRouter = Router()
 
 
 mailRouter.post('/send', mailController.mail)
-mailRouter.get('/', (req, res) => {
+mailRouter.get('/', (rres:Response) => {
   res.send({
     "hello":"world"
   })
