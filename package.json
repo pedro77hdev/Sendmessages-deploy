@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "node build/src/app.js ",
-    "dev": "nodemon src/app.ts",
-    "build": "sucrase ./src -d ./dist --transforms typescript,imports"
+    "dev": "nodemon src/app.ts"
   },
   "_moduleAliases": {
     "@src": "./src"
